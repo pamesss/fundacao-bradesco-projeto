@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/*---------------------------------------------*/
+:root {
+    /*arts belong to Firewatch*/
+    --backgroundImage-normal: url(./img/day.png);
+    --backgroundImage-darkmode: url(./img/night.png);
+
+    --contentBox-normalColor: #f1bda8;
+    --contentBox-darkmodeColor: #20097e;
+
+    --white: #eeeeee;
+    --black: #222;
+
+    --button-normalColor: #c5226e;
+    --button-darkmodeColor: #eeeeee;
+
+}
+.light-theme {
+    --bg: var(--backgroundImage-normal);
+    --boxContentColor: var(--contentBox-normalColor);
+    --fontColor: var(--black);
+    --buttonColor: var(--button-normalColor);
+    --footerTextColor: var(--white);
+}
+.dark-theme {
+    --bg: var(--backgroundImage-darkmode);
+    --boxContentColor: var(--contentBox-darkmodeColor);
+    --fontColor: var(--white);
+    --buttonColor: var(--button-darkmodeColor);
+    --footerTextColor: var(--white);
+}
+/*---------------------------------------------*/
+
+body {
+    background-image: var(--bg);
+    background-size: auto;
+    font-family: "Inter";
+    display: flex;
+    justify-content: center;
+    
+
+}
+.content-box {
+    max-width: 600px;
+    min-width: 350px;
+    background: var(--boxContentColor);
+    border-radius: 15px;
+    box-sizing: content-box;
+
+    margin: 50px 12px;
+    
+}
+h1 {
+    color: var(--fontColor);
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: center;
+    
+    padding: 15px 40px;
+}
+
+p {
+    color: var(--fontColor);
+    font-size: 1em;
+    text-align: center;
+
+    padding: 0 40px;
+}
+
+ul {
+    padding: 20px 40px;
+}
+li {
+    color: var(--fontColor);
+    font-size: 1em;
+
+    padding: 2px 0;
+}
+
+.button-content-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;    
+    
+    width: 150px;
+
+    margin: 0px auto 20px auto;
+}
+
+.btn-1{
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    font-size: 1em;
+    color: var(--fontColor);
+    background: none;
+
+    border-radius: 20px;
+    border: 2px;
+}.btn-1:hover{
+    text-shadow: 1px 1px 30px var(--fontColor);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.footer-text {
+    font-size: 0.9em;
+    color: var(--footerTextColor);
+}
+.footer-link {
+    color: var(--footerTextColor);
+}
+
